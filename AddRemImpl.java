@@ -10,25 +10,28 @@ public class AddRemImpl extends UnicastRemoteObject implements AddRem{
 public AddRemImpl() throws RemoteException{};
 
     @Override
-    public int add(final int x, final int y) throws RemoteException {
+    public double add(final double x, final double y) throws RemoteException {
         // TODO Auto-generated method stub
         return x + y;
     }
 
     @Override
-    public int sub(final int x, final int y) throws RemoteException {
+    public double sub(final double x, final double y) throws RemoteException {
         // TODO Auto-generated method stub
         return x - y;
     }
 
     @Override
-    public int div(final int x, final int y) throws RemoteException {
+    public double div(final double x, final double y) throws RemoteException {
         // TODO Auto-generated method stub
+        if(y==0){
+            return 0;
+        }
         return x / y;
     }
 
     @Override
-    public int mult(final int x, final int y) throws RemoteException {
+    public double mult(final double x, final double y) throws RemoteException {
         // TODO Auto-generated method stub
         return x*y;
     }

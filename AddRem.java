@@ -1,9 +1,9 @@
 import java.rmi.*;
 public interface AddRem extends Remote{
-    public int add(int x , int y)throws RemoteException ;
-    public int sub(int x ,int y) throws RemoteException;
+    public double add(double x ,double y)throws RemoteException ;
+    public double sub(double x ,double y) throws RemoteException;
 
-    public int div(int x ,int y) throws RemoteException;
-    public int mult(int x ,int y) throws RemoteException;
+    public double div(double x ,double y) throws RemoteException;
+    public double mult(double x ,double y) throws RemoteException;
 
 }

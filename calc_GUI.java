@@ -18,9 +18,9 @@ import java.util.*;
 // package ds_project;
 public class calc_GUI extends javax.swing.JFrame {
 
-    int number1 = 0;
-    int number2 = 0;
-    int ans = 0;
+   Double number1 = 0.0;
+   Double number2 = 0.0;
+   Double ans = 0.0;
     String snum2 = null;
     String snum1 = null;
     AddRem remobj;
@@ -87,15 +87,27 @@ public class calc_GUI extends javax.swing.JFrame {
                 snum1 = num1.getText();
                 snum2 = num2.getText();
 
-                number1 = Integer.parseInt(snum1);
-                number2 = Integer.parseInt(snum2);
-
-                try {
+              
+                try{
+                    number1 = Double.parseDouble(snum1);
+                    number2 = Double.parseDouble(snum2);
+            
+               
                     ans = remobj.add(number1, number2);
-                } catch (Exception e) {
-                    System.out.print(e);
+                     jTextArea1.setText(ans + " ");
+              
+         
+              
+ 
+
+                   
+                   
+                   
+                }catch(Exception e){
+                    jTextArea1.setText(e + " ");
                 }
-                jTextArea1.setText(ans + " ");
+
+               
 
             }
         });
@@ -107,15 +119,25 @@ public class calc_GUI extends javax.swing.JFrame {
                 snum1 = num1.getText();
                 snum2 = num2.getText();
 
-                number1 = Integer.parseInt(snum1);
-                number2 = Integer.parseInt(snum2);
-
-                try {
+              
+                try{
+                    number1 = Double.parseDouble(snum1);
+                    number2 = Double.parseDouble(snum2);
+            
+             
                     ans = remobj.sub(number1, number2);
-                } catch (Exception e) {
-                    System.out.print(e);
+                     jTextArea1.setText(ans + " ");
+             
+              
+ 
+
+                   
+                   
+                   
+                }catch(Exception e){
+                    jTextArea1.setText(e + " ");
                 }
-                jTextArea1.setText(ans + " ");
+
             }
         });
 
@@ -126,15 +148,25 @@ public class calc_GUI extends javax.swing.JFrame {
                 snum1 = num1.getText();
                 snum2 = num2.getText();
 
-                number1 = Integer.parseInt(snum1);
-                number2 = Integer.parseInt(snum2);
-
-                try {
+              
+                try{
+                    number1 = Double.parseDouble(snum1);
+                    number2 = Double.parseDouble(snum2);
+            
+            
                     ans = remobj.mult(number1, number2);
-                } catch (Exception e) {
-                    System.out.print(e);
+                     jTextArea1.setText(ans + " ");
+         
+              
+ 
+
+                   
+                   
+                   
+                }catch(Exception e){
+                    jTextArea1.setText(e + " ");
                 }
-                jTextArea1.setText(ans + " ");
+
             }
         });
 
@@ -142,18 +174,32 @@ public class calc_GUI extends javax.swing.JFrame {
         divide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(final java.awt.event.ActionEvent evt) {
                 divideActionPerformed(evt);
+              
                 snum1 = num1.getText();
                 snum2 = num2.getText();
-
-                number1 = Integer.parseInt(snum1);
-                number2 = Integer.parseInt(snum2);
-
-                try {
+              
+                try{
+                  
+                    number1 = Double.parseDouble(snum1);
+                    number2 = Double.parseDouble(snum2);
+            
+              
                     ans = remobj.div(number1, number2);
-                } catch (Exception e) {
-                    System.out.print(e);
+                    if(ans == 0.0){
+                        jTextArea1.setText("error");
+                    }else
+                     jTextArea1.setText(ans + " ");
+              
+              
+ 
+
+                   
+                   
+                   
+                }catch(Exception e){
+                    jTextArea1.setText(e + " ");
                 }
-                jTextArea1.setText(ans + " ");
+
             }
 
             private void divideActionPerformed(ActionEvent evt) {
