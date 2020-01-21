@@ -12,15 +12,15 @@ public class AddClient{
         System.out.printf("1. Add \n 2. sub \n 3. div \n 4. mult \n");
         ch = in.nextInt();
 
-        int num1, num2;
+      Double num1, num2;
     
 
        
 
      System.out.printf(" \n Enter the first number \n");
-     num1 = in.nextInt();
+     num1 = in.nextDouble();
      System.out.printf("  Enter the first number \n");
-     num2 = in.nextInt();
+     num2 = in.nextDouble();
      try{
         AddRem remobj = (AddRem) Naming.lookup("rmi://" + host + "/AddRem");
         switch(ch){
@@ -41,38 +41,6 @@ public class AddClient{
      }catch(RemoteException e){
          System.out.print(e);
      }
-
-// switch(ch){
-//     case 1:
-//     System.out.printf(" \n Enter the first number \n");
-//      num1 = in.nextInt();
-//      System.out.printf("  Enter the first number \n");
-//      num2 = in.nextInt();
-//      try{
-//         System.out.printf("\n The result is "+ remobj.add(num1,num2));
-//      }catch(RemoteException e){
-//          System.out.print(e);
-//      }
-
-//     break;
-//     case 2:
-//     System.out.printf(" \n Enter the first number \n");
-//      num1 = in.nextInt();
-//      System.out.printf("  Enter the first number \n");
-//      num2 = in.nextInt();
-//     break;
-//     case 3:
-//     System.out.printf(" \n Enter the first number \n");
-//      num1 = in.nextInt();
-//      System.out.printf("  Enter the first number \n");
-//      num2 = in.nextInt();
-//     break;
-//     case 4:
-//     System.out.printf(" \n Enter the first number \n");
-//      num1 = in.nextInt();
-//      System.out.printf("  Enter the first number \n");
-//      num2 = in.nextInt();
-//     break;
 
 
 
